@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organigrama</title>
+    <style>
+  .navbar {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .navbar-nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-item {
+            margin-left: 20px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .tree {
+            margin-top: 60px; /* Ajuste para evitar que la barra de navegación cubra el contenido */
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+       body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+        }
+
+        .tree {
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .tree ul {
+            padding-top: 20px;
+            position: relative;
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tree li {
+            float: left;
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 5px 0 5px;
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Connecting lines */
+        .tree li::before, .tree li::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            border-top: 2px solid #fff;
+            width: 50%;
+            height: 20px;
+        }
+
+        .tree li::after {
+            right: auto;
+            left: 50%;
+            border-left: 2px solid #fff;
+        }
+
+        .tree li:only-child::after, .tree li:only-child::before {
+            display: none;
+        }
+
+        .tree li:only-child {
+            padding-top: 0;
+        }
+
+        .tree li:first-child::before, .tree li:last-child::after {
+            border: 0 none;
+        }
+
+        .tree li:last-child::before {
+            border-right: 2px solid #fff;
+            border-radius: 0 5px 0 0;
+        }
+
+        .tree li:first-child::after {
+            border-radius: 5px 0 0 0;
+        }
+
+        .tree ul ul::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border-left: 2px solid #fff;
+            width: 0;
+            height: 20px;
+        }
+
+        .tree li a {
+            border: 2px solid #fff;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.2);
+            font-size: 16px;
+            display: inline-block;
+            border-radius: 10px;
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+        }
+
+        .tree li a:hover, .tree li a:hover+ul li a {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        .tree li a.ceo {
+            background-color: #ff9800;
+            border-color: #e65100;
+        }
+
+        .tree li a.production {
+            background-color: #4caf50;
+            border-color: #2e7d32;
+        }
+
+        .tree li a.finance {
+            background-color: #2196f3;
+            border-color: #1e88e5;
+        }
+
+        .tree li a.hr {
+            background-color: #9c27b0;
+            border-color: #7b1fa2;
+        }
+
+        .tree li a.marketing {
+            background-color: #e91e63;
+            border-color: #c2185b;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="navbar-brand">Organigrama</a>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+            <li class="nav-item"><a href="#" class="nav-link"></a></li>
+            
+        </ul>
+    </nav>
+    <div class="tree">
+        <div class="title">Organigrama de la Empresa</div>
+        <ul>
+            <li>
+                <a href="#" class="ceo">Dirección General (CEO)</a>
+                <ul>
+                    <li>
+                        <a href="#" class="production">Producción</a>
+                        <ul>
+                            <li>
+                                <a href="#">Jefe de Producción</a>
+                                <ul>
+                                    <li><a href="#">Supervisores de Producción</a></li>
+                                    <li><a href="#">Operarios</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="finance">Finanzas</a>
+                        <ul>
+                            <li><a href="#">CFO</a></li>
+                            <li><a href="#">Contadores</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="hr">Recursos Humanos</a>
+                        <ul>
+                            <li><a href="#">Gerente de RRHH</a></li>
+                            <li><a href="#">Especialistas de Reclutamiento</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="marketing">Marketing y Ventas</a>
+                        <ul>
+                            <li><a href="#">Director de Marketing</a></li>
+                            <li><a href="#">Ejecutivos de Ventas</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

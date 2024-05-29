@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organización Formal e Informal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+        background: #333;
+        color: #fff;
+        padding-top: 30px;
+        min-height: 70px;
+        border-bottom: #0779e4 3px solid;
+    }
+    header a {
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+    header ul {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+    header li {
+        margin: 0 15px;
+    }
+    header li a {
+        display: block;
+        padding: 10px 20px;
+    }
+    header li a:hover {
+        background: #575757;
+        color: #000000;
+    }
+
+    li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #575757;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  text-transform: capitalize;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #575757;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+        .showcase {
+            min-height: 200px;
+            background: #333;
+            text-align: center;
+            color: #fff;
+            padding: 50px 0;
+        }
+        .showcase h1 {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        .content {
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Integrantes</a>
+                    <div class="dropdown-content">
+                      <a href="#">Blanque Joaquín</a>
+                      <a href="#">Bonilla Ignacio</a>
+                      <a href="#">Bellarrosa Julián</a>
+                    </div>
+                <li><a href="organigrama.html">Organigrama</a></li>
+               
+            </ul>
+        </div>
+    </header>
+
+    <div class="showcase">
+        <div class="container">
+            <h1>Organización formal e informal</h1>
+            <p>Una guía para comprender la organización en el proceso administrativo.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2>Organización Formal</h2>
+            <p>La organización formal se basa en normas, reglas y procedimientos explícitos y escritos. Define la estructura, las funciones y las relaciones dentro de una entidad de manera clara y organizada, a menudo representada mediante organigramas y otros documentos oficiales.</p>
+            <h3>Características</h3>
+            <ul>
+                <li>Normas y procedimientos establecidos</li>
+                <li>Jerarquía definida</li>
+                <li>Especialización</li>
+                <li>Unidad de mando</li>
+                <li>Objetividad</li>
+            </ul>
+
+            <h2>Organización Informal</h2>
+            <p>La organización informal se basa en las relaciones personales, intereses y preferencias de los miembros de la entidad, sin estar sujetas a normas o reglas oficiales. Se forma de manera espontánea y natural, a menudo expresándose mediante redes de comunicación y grupos de afinidad o influencia.</p>
+            <h3>Características</h3>
+            <ul>
+                <li>Flexibilidad</li>
+                <li>Estructura emocional</li>
+                <li>Comunicación libre</li>
+                <li>Adaptabilidad</li>
+                <li>Participación individual</li>
+            </ul>
+
+            <h2>Diferencias Clave</h2>
+            <table>
+                <tr>
+                    <th>Aspecto</th>
+                    <th>Organización Formal</th>
+                    <th>Organización Informal</th>
+                </tr>
+                <tr>
+                    <td>Base</td>
+                    <td>Reglas y procedimientos oficiales</td>
+                    <td>Relaciones personales y emocionales</td>
+                </tr>
+                <tr>
+                    <td>Estructura</td>
+                    <td>Jerarquía definida</td>
+                    <td>Sin jerarquía específica</td>
+                </tr>
+                <tr>
+                    <td>Planificación</td>
+                    <td>Alta planificación</td>
+                    <td>Baja planificación</td>
+                </tr>
+                <tr>
+                    <td>Estabilidad</td>
+                    <td>Alta estabilidad</td>
+                    <td>Menor estabilidad</td>
+                </tr>
+                <tr>
+                    <td>Comunicación</td>
+                    <td>Formal y a través de canales establecidos</td>
+                    <td>Libre y sin canales formales</td>
+                </tr>
+                <tr>
+                    <td>Autoridad</td>
+                    <td>Definida y clara</td>
+                    <td>Difusa y laxa</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>Organización Empresarial TP 1 Comisión 1</p>
+    </footer>
+</body>
+</html>
